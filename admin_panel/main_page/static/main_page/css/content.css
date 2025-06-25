@@ -1,0 +1,33 @@
+  /* Сброс стилей */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f9fc;
+    color: #222;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  /* Контейнер */
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  /* Основной контент */
+  .main-content {
+    flex-grow: 1;
+    padding: 25px 40px;
+    overflow-y: auto;
+  }
+
+
+  /* Заголовок раздела */
+  h2.section-title {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }

@@ -1,0 +1,103 @@
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  .menu-btn {
+    font-size: 22px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none; /* пока скрываем */
+  }
+  .search-box {
+    position: relative;
+    width: 320px;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+  }
+  .search-box svg {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #888;
+    width: 18px;
+    height: 18px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  .icon-btn {
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .icon-btn .badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #ff3b30;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+  .flag {
+    width: 28px;
+    height: 20px;
+    border-radius: 3px;
+    margin-right: 8px;
+    border: 1px solid #ddd;
+  }
+  .language-select {
+    margin-right: 20px;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  }
+  .profile img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .profile-info {
+    font-size: 14px;
+  }
+  .profile-info .name {
+    font-weight: 700;
+  }
+  .profile-info .role {
+    font-size: 12px;
+    color: #999;
+  }
+  .dropdown-arrow {
+    margin-left: 6px;
+    border: solid #666;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+  }

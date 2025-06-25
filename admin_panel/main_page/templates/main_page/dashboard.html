@@ -1,0 +1,96 @@
+{% extends 'main_page/index.html' %}
+{% block main %}
+<main class="main-content">
+        <header class="header">
+          <div class="header-left">
+            <div class="menu-btn">&#9776;</div>
+            <div class="search-box">
+              <input type="text" placeholder="Search" />
+              <svg viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" stroke="#888" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="icon-btn">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#666"><path d="M12 22c1.1 0 2-.9 2-2h-4a2 2 0 0 0 2 2zm6-6v-5a6 6 0 0 0-5-5.91V5a1 1 0 1 0-2 0v.09A6 6 0 0 0 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+              <span class="badge">6</span>
+            </div>
+            <img class="flag" src="https://flagcdn.com/gb.svg" alt="UK Flag" />
+            <select class="language-select" aria-label="Select Language">
+              <option value="en" selected>English</option>
+              <option value="ru">Russian</option>
+              <option value="fr">French</option>
+            </select>
+            <div class="profile" tabindex="0" aria-haspopup="true" aria-expanded="false">
+              <img src="https://i.pravatar.cc/36" alt="User Avatar" />
+              <div class="profile-info">
+                <div class="name">Moni Roy</div>
+                <div class="role">Admin</div>
+              </div>
+              <i class="dropdown-arrow"></i>
+            </div>
+          </div>
+        </header>
+
+        <h2 class="section-title">Dashboard</h2>
+
+        <div class="stats-cards">
+          <div class="card total-user">
+            <div class="title">Total User</div>
+            <div class="value">40,689</div>
+            <div class="change up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
+              8.5% Up from yesterday
+            </div>
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM6 19c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/></svg>
+            </div>
+          </div>
+          <div class="card total-order">
+            <div class="title">Total Order</div>
+            <div class="value">10,293</div>
+            <div class="change up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
+              1.3% Up from past week
+            </div>
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16V8a2 2 0 0 0-2-2h-4V4H9v2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"/></svg>
+            </div>
+          </div>
+          <div class="card total-sales">
+            <div class="title">Total Sales</div>
+            <div class="value">$89,000</div>
+            <div class="change down">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+              4.3% Down from yesterday
+            </div>
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 17h6v-2H9v2zm3-15c-4.97 0-9 4.03-9 9 0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9z"/></svg>
+            </div>
+          </div>
+          <div class="card total-pending">
+            <div class="title">Total Pending</div>
+            <div class="value">2,040</div>
+            <div class="change up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
+              1.8% Up from yesterday
+            </div>
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <section class="chart-container">
+          <div class="chart-header">
+            <h3>Sales Details</h3>
+            <select aria-label="Select month">
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </select>
+          </div>
+          <canvas id="salesChart"></canvas>
+        </section>
+
+      </main>
+{% endblock %}

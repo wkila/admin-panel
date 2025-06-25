@@ -1,0 +1,19 @@
+  .chart-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 30px 30px 30px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+  }
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .chart-header select {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 14px;
+    outline: none;
+  }

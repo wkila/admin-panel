@@ -1,0 +1,56 @@
+  /* Сайдбар */
+  .sidebar {
+    width: 240px;
+    background: #fff;
+    border-right: 1px solid #e5e8eb;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .sidebar .logo {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .sidebar .logo span {
+    color: #2f80ed;
+  }
+  .nav-section {
+    flex-grow: 1;
+  }
+  .nav-section h4 {
+    font-weight: 600;
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    margin: 30px 0 10px 0;
+    letter-spacing: 1px;
+  }
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-list li {
+    margin-bottom: 15px;
+  }
+  .nav-list li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #444;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+  }
+  .nav-list li a.active,
+  .nav-list li a:hover {
+    background: #2f80ed;
+    color: #fff;
+  }
+  .nav-list li a svg {
+    margin-right: 12px;
+    fill: currentColor;
+    width: 18px;
+    height: 18px;
+  }

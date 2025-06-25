@@ -1,0 +1,68 @@
+  .stats-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 220px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+    position: relative;
+  }
+  .card .title {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .card .value {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .card .change {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+  }
+  .card .change.up {
+    color: #27ae60;
+  }
+  .card .change.down {
+    color: #eb5757;
+  }
+  .card .change svg {
+    margin-right: 6px;
+    width: 14px;
+    height: 14px;
+  }
+  .card .icon-circle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #eee;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card.total-user .icon-circle {
+    background: #dbe5ff;
+    color: #4f6ef7;
+  }
+  .card.total-order .icon-circle {
+    background: #fff0d6;
+    color: #f2b01e;
+  }
+  .card.total-sales .icon-circle {
+    background: #d6f5e1;
+    color: #27ae60;
+  }
+  .card.total-pending .icon-circle {
+    background: #d9f0ff;
+    color: #2f80ed;
+  }
