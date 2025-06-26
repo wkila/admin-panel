@@ -1,3 +1,9 @@
 {% extends 'main_page/index.html' %}
 {% block contact %}
-{%  %}
+<form class="contact-form" method="post">
+    {% csrf_token %}
+    <h2>Связаться с нами</h2>
+    {{ form }}
+    <button type="submit">Отправить</button>
+</form>
+{% endblock %}
