@@ -43,8 +43,8 @@
     font-size: 14px;
     transition: background 0.3s, color 0.3s;
   }
-  .nav-list li a.active,
-  .nav-list li a:hover {
+  .nav-list li .active,
+  .nav-list li:hover {
     background: #2f80ed;
     color: #fff;
   }

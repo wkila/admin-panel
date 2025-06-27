@@ -19,7 +19,7 @@
         <div class="logo">Dash<span>Stack</span></div>
         <nav class="nav-section">
           <ul class="nav-list">
-            <li><a href="{% url 'dashboard' %}" class="active">
+            <li><a href="{% url 'dashboard' %}">
               <!-- Icon dashboard -->
               <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8v-10h-8v10zm0-18v6h8V3h-8z"/></svg>
               Dashboard
@@ -84,6 +84,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{% static 'main_page/js/main.js' %}"></script>
+    <script src="{% static 'main_page/js/switchtabs.js' %}"></script>
 </body>
 </html>
 
