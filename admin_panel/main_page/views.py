@@ -3,16 +3,25 @@ from django.shortcuts import render
 from .forms import ContactModelForm
 from .models import ContactModel
 
+api_req = {
+    'Получить цену': {
+        'get_price': {
+            'Количество прокси': 'count',
+            'Период': 'period'
+        }
+    }
+}
+
 # Create your views here.
 
 def main_page(request):
-    data = {
-        'navbar': ['Dashboard', 'Products', ]
-    }
     return render(request, 'main_page/index.html')
 
 def dashboard(request):
-    return render(request, 'main_page/dashboard.html')
+    data = {
+        'names_cards': ['Количество прокси', 'Баланс']
+    }
+    return render(request, 'main_page/dashboard.html', {'data': data})
 
 # def contact(request):
 #     return render(request, 'main_page/contact.html')
