@@ -6,6 +6,9 @@ from .models import ContactModel
 # Create your views here.
 
 def main_page(request):
+    data = {
+        'navbar': ['Dashboard', 'Products', ]
+    }
     return render(request, 'main_page/index.html')
 
 def dashboard(request):

@@ -28,30 +28,10 @@
               <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zM4 11h16v2H4zM4 16h16v2H4z"/></svg>
               Products
             </a></li>
-            <li><a href="#">
-              <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1 4.5 2.09C13.09 4 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-              Favorites
-            </a></li>
-            <li><a href="#">
-              <svg viewBox="0 0 24 24"><path d="M20 6h-2v9H6v2h12v-5h2V6z"/></svg>
-              Inbox
-            </a></li>
-            <li><a href="#">
-              <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
-              Order Lists
-            </a></li>
-            <li><a href="#">
-              <svg viewBox="0 0 24 24"><path d="M3 3h18v2H3zM3 8h18v2H3zM3 13h18v2H3z"/></svg>
-              Product Stock
-            </a></li>
           </ul>
 
           <h4>Pages</h4>
           <ul class="nav-list">
-            <li><a href="#">
-              <svg viewBox="0 0 24 24"><path d="M3 13h18v2H3z"/></svg>
-              Pricing
-            </a></li>
             <li><a href="#">
               <svg viewBox="0 0 24 24"><path d="M3 13h18v2H3z"/></svg>
               Calendar
@@ -64,14 +44,6 @@
               <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
               Contact
             </a></li>
-            <li><a href="#">
-              <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
-              Invoice
-            </a></li>
-            <li><a href="#">
-              <svg viewBox="0 0 24 24"><path d="M4 7h16v2H4zM4 11h16v2H4zM4 15h16v2H4z"/></svg>
-              UI Elements
-            </a></li>
           </ul>
         </nav>
       </aside>
@@ -83,7 +55,9 @@
       {% endblock %}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{% static 'main_page/js/main.js' %}"></script>
+    {% if request.resolver_match.url_name == 'about' %}
+        <script src="{% static 'main_page/js/main.js' %}"></script>
+    {% endif %}
     <script src="{% static 'main_page/js/switchtabs.js' %}"></script>
 </body>
 </html>
