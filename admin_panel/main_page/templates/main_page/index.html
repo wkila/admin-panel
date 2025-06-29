@@ -55,7 +55,7 @@
       {% endblock %}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    {% if request.resolver_match.url_name == 'about' %}
+    {% if request.resolver_match.url_name == 'dashboard' %}
         <script src="{% static 'main_page/js/main.js' %}"></script>
     {% endif %}
     <script src="{% static 'main_page/js/switchtabs.js' %}"></script>

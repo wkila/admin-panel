@@ -34,50 +34,20 @@
         <h2 class="section-title">Dashboard</h2>
 
         <div class="stats-cards">
-          <div class="card total-user">
-            <div class="title">Total User</div>
-            <div class="value">40,689</div>
-            <div class="change up">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
-              8.5% Up from yesterday
-            </div>
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM6 19c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/></svg>
-            </div>
-          </div>
-          <div class="card total-order">
-            <div class="title">Total Order</div>
-            <div class="value">10,293</div>
-            <div class="change up">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
-              1.3% Up from past week
-            </div>
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16V8a2 2 0 0 0-2-2h-4V4H9v2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"/></svg>
-            </div>
-          </div>
-          <div class="card total-sales">
-            <div class="title">Total Sales</div>
-            <div class="value">$89,000</div>
-            <div class="change down">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
-              4.3% Down from yesterday
-            </div>
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 17h6v-2H9v2zm3-15c-4.97 0-9 4.03-9 9 0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9z"/></svg>
-            </div>
-          </div>
-          <div class="card total-pending">
-            <div class="title">Total Pending</div>
-            <div class="value">2,040</div>
-            <div class="change up">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
-              1.8% Up from yesterday
-            </div>
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/></svg>
-            </div>
-          </div>
+            {% for el in data.names_cards %}
+                <div class="card">
+                    <div class="title">{{ el }}</div>
+                    {% if el == 'Баланс' %}
+                        <div class="icon-circle">
+                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16V8a2 2 0 0 0-2-2h-4V4H9v2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"/></svg>
+                      </div>
+                    {% else %}
+                        <div class="icon-circle">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM6 19c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/></svg>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
         </div>
 
         <section class="chart-container">
