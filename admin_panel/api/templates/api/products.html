@@ -1,0 +1,39 @@
+    {% extends 'main_page/index.html' %}
+{% load my_filters %}
+{% block products %}
+    <section class="products">
+        <h1>Купить товар</h1>
+        <div class="purchase-form">
+          <div class="products-list" aria-label="Список товаров">
+            <h2>Что вы можете купить</h2>
+            <ul>
+              <li>Товар 1 — 1000 ₽</li>
+              <li>Товар 2 — 2500 ₽</li>
+              <li>Товар 3 — 500 ₽li>
+              <li>Товар 4 — 750 ₽</li>
+              <li>Товар 5 — 1200 ₽</li>
+            </ul>
+          </div>
+
+          <div class="inputs-block" aria-label="Обязательные параметры для покупки">
+            <label for="product-select">Выберите товар *</label>
+            <select id="product-select" name="product" required>
+                  <option value="" disabled selected>-- Выберите товар --</option>
+                    {% for key, value in data_names.items %}
+                        <option value="{{ value }}">{{ key }}</option>
+                    {% endfor %}
+            </select>
+              <div class="form_block">
+                  {% for key, value in data_names.items %}
+                      <form method="post" id="{{ value }}" class="forms_display">
+                        {% csrf_token %}
+                        {{ forms_dict|find_form:value }}
+                        <button class="btn_submit" type="submit" value="{{ value }}">Отправить запрос</button>
+                      </form>
+                  {% endfor %}
+                </div>
+          </div>
+        </div>
+    </section>
+
+    {% endblock %}

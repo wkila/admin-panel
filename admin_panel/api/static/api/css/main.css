@@ -1,0 +1,100 @@
+section.products {
+    flex-grow: 1;
+    padding: 30px 40px;
+    overflow-y: auto;
+  }
+  section.products h1 {
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  /* Форма с двумя колонками */
+  .purchase-form {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+  }
+
+  /* Левая колонка - список товаров */
+  .purchase-form .products-list {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background: #f9faff;
+  }
+  .purchase-form .products-list h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #007bff;
+  }
+  .purchase-form .products-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .purchase-form .products-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+  }
+  .purchase-form .products-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* Правая колонка - поля ввода */
+  .purchase-form .inputs-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .inputs-block label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .inputs-block input[type="text"],
+  .inputs-block input[type="email"],
+  .inputs-block input[type="number"],
+  .inputs-block select {
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    outline-offset: 2px;
+    outline-color: transparent;
+    transition: outline-color 0.2s;
+  }
+
+  /* Кнопка купить */
+.btn_submit {
+    margin-top: auto;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  form button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Адаптив */
+  @media (max-width: 720px) {
+    form.purchase-form {
+      flex-direction: column;
+    }
+    .purchase-form .products-list,
+    .purchase-form .inputs-block {
+      width: 100%;
+    }
+    .purchase-form button.buy-btn {
+      width: 100%;
+    }
+  }

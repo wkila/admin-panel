@@ -39,7 +39,7 @@
   .contact-form textarea {
     min-height: 100px;
   }
-  .contact-form button {
+  button {
     width: 100%;
     background-color: #3498db;
     color: white;
@@ -51,6 +51,6 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  .contact-form button:hover {
+  button:hover {
     background-color: #2980b9;
   }

@@ -11,7 +11,6 @@ api_req = {
         }
     }
 }
-
 # Create your views here.
 
 def main_page(request):

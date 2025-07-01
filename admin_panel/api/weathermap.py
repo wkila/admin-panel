@@ -1,23 +1,6 @@
 import requests
 
-
 api_key = 'ac1e1a88b8-0075e8d73d-9e27ab2655'
-# method = 'getcount'
-#
-# params = {
-#     "country": 'ru',
-#
-# }
-#
-#
-# url = f'https://px6.link/api/{api_key}/{method}'
-
-# res = requests.get(url, proxies=proxies,params=params)
-#
-# print(res.json())
-#
-
-
 
 BASE_URL = 'https://px6.link/api/'
 class Proxy6:
@@ -27,7 +10,6 @@ class Proxy6:
             "http": "http://B7JpTk:mEC4ph@94.131.54.6:9054",
             "https": "http://B7JpTk:mEC4ph@94.131.54.6:9054"
         }
-
 
     def _get(self, method, proxi, params=None):
         url = f"{BASE_URL}/{self.api_key}/{method}"

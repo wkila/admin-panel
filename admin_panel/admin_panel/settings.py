@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_page',
-    'admin_panel'
+    'admin_panel',
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -123,9 +124,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Дополнительные папки со статикой (например, общие для проекта)
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # если есть общие статические файлы на уровне проекта
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static',  # если есть общие статические файлы на уровне проекта
+# ]
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'admin_panel/static',
 #     BASE_DIR / 'main_page/static'
